@@ -8,6 +8,10 @@
                     <p class="text-3xl">Data Contacts</p>
                 </div>
             </div>
+            <form action="addContact" method="POST">
+                @csrf
+                <button class="btn bg-warning px-6">Tambah</button>
+            </form>
             <div class="row-auto p-4">
                 <div class="overflow-x-auto">
                     <table class="table  w-full border border-gray-300 rounded-lg">

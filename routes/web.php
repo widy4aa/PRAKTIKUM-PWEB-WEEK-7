@@ -12,6 +12,8 @@ Route::get('/login', function () {
 });
 
 Route::get('/contact',[contactsController::class,'index']);
+Route::post('/addContact',[contactsController::class,'addUsers']);
+
 
 Route::get('/register', function () {
     return view('register');
