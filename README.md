@@ -67,10 +67,10 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## Laravel Version Laravel Framework 11.28.0
 
-##RUN ON 
+## RUN ON 
 Composer version 2.8.1 2024-10-04 11:31:01
 PHP version 8.3.12 (/usr/bin/php)
 
 
-##Screenshot
-<img src="https://ibb.co.com/Z1DzTdR">
+## Screenshot
+<a href="https://ibb.co.com/Z1DzTdR"><img src="https://i.ibb.co.com/935HYnm/Screenshot-20241018-211051.png" alt="Screenshot-20241018-211051" border="0"></a>
