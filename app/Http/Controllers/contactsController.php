@@ -6,23 +6,24 @@
 
     class contactsController extends Controller
     {
-        public $users = [];
+        protected $users = [];
 
         public function index()
         {
-            $faker = Faker::create();
 
-            for ($i = 0; $i < 10; $i++) {
+            $users = session(key: 'users', default: []);
+            if (count($users) == 0) {
+                $faker = Faker::create();
+                for ($i = 0; $i < 5 ; $i++) {
                 $users[] = [
                     'username' => $faker->userName,
                     'name' => $faker->name,
                     'email' => $faker->unique()->safeEmail,
                     'phone' => $faker->phoneNumber,
                 ];
+                }
             }
-
-            $users = session('users', []);
-
+            session(['users' => $users]);
             return view ('contact', ['users' => $users]);
         }
 
@@ -36,8 +37,11 @@
                 'email' => $faker->unique()->safeEmail,
                 'phone' => $faker->phoneNumber,
             ];
-                                            session(['users' => $users]);
+            session(['users' => $users]);
             return view('contact', ['users' => $users]);
     }
-
+        public function deletUsers(Request $request){
+            $users = session('users', []);
+            dd($users);
+        }
 }
