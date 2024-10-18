@@ -4,7 +4,7 @@
     </div>
     <div class="flex-none">
       <ul class="menu menu-horizontal px-1">
-        <li><a class="btn bg-danger px-9" href="login">Logout</a></li>
+        <li><a class="btn bg-danger px-9" href="/login">Logout</a></li>
       </ul>
     </div>
   </div>

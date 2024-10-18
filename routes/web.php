@@ -13,6 +13,7 @@ Route::get('/login', function () {
 
 Route::get('/contact',[contactsController::class,'index']);
 Route::post('/addContact',[contactsController::class,'addUsers']);
+Route::delete('/delContact/{email}', [contactsController::class,'deletUsers']);
 
 
 Route::get('/register', function () {

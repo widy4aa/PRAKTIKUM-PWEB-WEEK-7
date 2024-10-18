@@ -38,7 +38,7 @@
 
             <!-- Login Link -->
             <div class="text-sm text-center">
-                <p>Already have an account? <a href="login" class="text-blue-500 hover:underline">Login</a></p>
+                <p>Already have an account? <a href="/login" class="text-blue-500 hover:underline">Login</a></p>
             </div>
         </div>
     </div>

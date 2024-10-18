@@ -40,8 +40,17 @@
             session(['users' => $users]);
             return view('contact', ['users' => $users]);
     }
-        public function deletUsers(Request $request){
+        public function deletUsers($email){
             $users = session('users', []);
-            dd($users);
+            $users_new = [];
+            foreach ($users as $user){
+                if ($user['email'] != $email){
+                    $users_new[] = $user;
+                }
+            }
+            session()->forget('users');
+            session(['users' => $users_new]);
+
+            return view('contact', ['users' => $users_new]);
         }
 }
